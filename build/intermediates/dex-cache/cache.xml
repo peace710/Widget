@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\Widget\widget\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e2840ecc2060f542b64aeeb4ee093fb1d833a2b5">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-770b5caf05618bd98bac35cb8703a019917e16be.jar" />
+    </item>
+
+</items>
