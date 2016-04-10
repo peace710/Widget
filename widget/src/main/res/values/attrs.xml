@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Switch">
+        <attr name="spotPadding" format="dimension|reference" />
+        <attr name="switchOnColor" format="color|reference" />
+        <attr name="switchOffColor" format="color|reference" />
+        <attr name="spotOnColor" format="color|reference" />
+        <attr name="spotOffColor" format="color|reference" />
+        <attr name="switchValue" format="boolean" />
+    </declare-styleable>
+</resources>
