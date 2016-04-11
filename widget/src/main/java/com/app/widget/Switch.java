@@ -2,6 +2,7 @@ package com.app.widget;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.Resources;
@@ -21,7 +22,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 public class Switch extends View implements View.OnClickListener{
     private static final int DEFAULT_WIDTH = 50;
     private static final int DEFAULT_HEIGHT = 30;
-
     private static final int DEFAULT_SPOT_PADDING = 2;
     private static final String DEFAULT_SWITCH_ON_COLOR = "#484EBB7F";
     private static final String DEFAULT_SWITCH_OFF_COLOR = "#DADADA";
@@ -35,11 +35,9 @@ public class Switch extends View implements View.OnClickListener{
 
     private static final int SWITCH_OFF_POS = 0;
     private static final int SWITCH_ON_POS = 1;
-
     private int state = STATE_SWITCH_OFF;
 
     private Resources res;
-
     private Paint paint;
     private RectF rectF;
     private int switchOnColor;
@@ -47,9 +45,7 @@ public class Switch extends View implements View.OnClickListener{
     private int spotOnColor;
     private int spotOffColor;
     private int spotPadding;
-
     private float pos;
-
     private boolean isSwitch;
 
     private OnSwitchListener listener;
@@ -76,7 +72,6 @@ public class Switch extends View implements View.OnClickListener{
         rectF = new RectF();
 
         TypedArray array = getContext().obtainStyledAttributes(attrs,R.styleable.Switch);
-
         spotPadding = (int)array.getDimension(R.styleable.Switch_spotPadding,px2dp(DEFAULT_SPOT_PADDING));
         switchOnColor = array.getColor(R.styleable.Switch_switchOnColor,Color.parseColor(DEFAULT_SWITCH_ON_COLOR));
         switchOffColor = array.getColor(R.styleable.Switch_switchOffColor,Color.parseColor(DEFAULT_SWITCH_OFF_COLOR));
@@ -143,7 +138,7 @@ public class Switch extends View implements View.OnClickListener{
         roundRects = calRoundRect(pos);
         drawRoundRect(canvas,switchOffColor,roundRects[0],roundRects[1],roundRects[2],roundRects[3],roundRects[4]);
         float[] spots = calSpot(pos);
-        drawSpot(canvas,spotOnColor,spots[0],spots[1],spots[2],spots[3],spots[4]);
+        drawSpot(canvas,calSpotColor(pos),spots[0],spots[1],spots[2],spots[3],spots[4]);
     }
 
     private void drawSwitchOn(Canvas canvas){
@@ -159,7 +154,7 @@ public class Switch extends View implements View.OnClickListener{
         roundRects = calRoundRect(1- pos);
         drawRoundRect(canvas,switchOffColor,roundRects[0],roundRects[1],roundRects[2],roundRects[3],roundRects[4]);
         float[] spots = calSpot(1 - pos);
-        drawSpot(canvas,spotOffColor,spots[0],spots[1],spots[2],spots[3],spots[4]);
+        drawSpot(canvas,calSpotColor(1 - pos),spots[0],spots[1],spots[2],spots[3],spots[4]);
     }
 
     private void drawRoundRect(Canvas canvas,int color,float left,float top,float right,float bottom,float r){
@@ -193,6 +188,14 @@ public class Switch extends View implements View.OnClickListener{
         float right = left + 2 * r;
         float bottom = top + 2 * r;
         return new float[]{left,top,right,bottom,r};
+    }
+
+    private int calSpotColor(float fraction){
+        return calColor(fraction,spotOffColor,spotOnColor);
+    }
+
+    private int calColor(float fraction,int startColor,int endColor){
+        return (Integer)new ArgbEvaluator().evaluate(fraction,startColor,endColor);
     }
 
     public void setOnSwitchListener(OnSwitchListener listener) {
@@ -235,7 +238,7 @@ public class Switch extends View implements View.OnClickListener{
     }
 
     public interface OnSwitchListener{
-         void onSwitch(boolean isSwitch);
+        void onSwitch(boolean isSwitch);
     }
 
     public boolean isSwitch() {
