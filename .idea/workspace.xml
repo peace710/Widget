@@ -9,9 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3818c8f5-97e7-4095-9b97-fa64e9b4147a" name="Default" comment="新增readme文件">
+    <list default="true" id="3818c8f5-97e7-4095-9b97-fa64e9b4147a" name="Default" comment="新增学习笔记">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Widget.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,102 +56,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1034484">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwitchCompat.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../android-studio-ide-143.2637817-windows/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.2.1/appcompat-v7-23.2.1-sources.jar!/android/support/v7/widget/SwitchCompat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#40515#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#5759#5760#0" expanded="false" />
-                <element signature="e#5794#5795#0" expanded="false" />
-                <element signature="e#12848#12849#0" expanded="false" />
-                <element signature="e#12885#12886#0" expanded="false" />
-                <element signature="e#13575#13576#0" expanded="false" />
-                <element signature="e#13613#13614#0" expanded="false" />
-                <element signature="e#14111#14112#0" expanded="false" />
-                <element signature="e#14151#14152#0" expanded="false" />
-                <element signature="e#14846#14847#0" expanded="false" />
-                <element signature="e#14883#14884#0" expanded="false" />
-                <element signature="e#15752#15753#0" expanded="false" />
-                <element signature="e#15789#15790#0" expanded="false" />
-                <element signature="e#16329#16330#0" expanded="false" />
-                <element signature="e#16363#16364#0" expanded="false" />
-                <element signature="e#16493#16494#0" expanded="false" />
-                <element signature="e#16523#16524#0" expanded="false" />
-                <element signature="e#16853#16854#0" expanded="false" />
-                <element signature="e#16884#16885#0" expanded="false" />
-                <element signature="e#17502#17503#0" expanded="false" />
-                <element signature="e#17534#17535#0" expanded="false" />
-                <element signature="e#27386#27387#0" expanded="false" />
-                <element signature="e#27430#27431#0" expanded="false" />
-                <element signature="e#27739#27740#0" expanded="false" />
-                <element signature="e#27779#27780#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Switch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1894#1895#0" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
-                <element signature="e#7608#7609#0" expanded="true" />
-                <element signature="e#7674#7675#0" expanded="true" />
-                <element signature="e#7901#7902#0" expanded="true" />
-                <element signature="e#7941#7942#0" expanded="true" />
-                <element signature="e#8905#8906#0" expanded="true" />
-                <element signature="e#8936#8937#0" expanded="true" />
-                <element signature="e#9444#9445#0" expanded="true" />
-                <element signature="e#9485#9486#0" expanded="true" />
-                <element signature="e#9802#10054#0" expanded="true" />
-                <element signature="e#10053#10054#0" expanded="true" />
-                <element signature="e#10091#10278#0" expanded="true" />
-                <element signature="e#10277#10278#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mds/switch/README.md">
           <provider selected="true" editor-type-id="text-editor">
@@ -163,32 +66,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="note.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mds/note.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1570248">
-              <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.3140496">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="attrs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget/src/main/res/values/attrs.xml">
+      <file leaf-file-name="Switch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="38" />
-              <folding />
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2427,9 +2332,10 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/app/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/widget/src/main/res/values/attrs.xml" />
-        <option value="$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/mds/switch/README.md" />
+        <option value="$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java" />
+        <option value="$PROJECT_DIR$/mds/note.md" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -2502,7 +2408,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../android-studio-ide-143.2637817-windows/sdk" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="022ATK7N3A037689" />
     <property name="android.project.structure.last.selected" value="app" />
@@ -2923,7 +2829,19 @@
       <option name="project" value="LOCAL" />
       <updated>1460377007203</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改链接地址">
+      <created>1460377128733</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1460377128733</updated>
+    </task>
+    <task id="LOCAL-00005" summary="新增学习笔记">
+      <created>1460382180432</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1460382180432</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2976,44 +2894,15 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="增加点击按钮颜色过渡变化" />
     <MESSAGE value="新增readme文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增readme文件" />
+    <MESSAGE value="修改链接地址" />
+    <MESSAGE value="新增学习笔记" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增学习笔记" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../android-studio-ide-143.2637817-windows/sdk/sources/android-23/android/animation/Animator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="455" column="10" selection-start-line="455" selection-start-column="10" selection-end-line="455" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#21008#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#5565#5566#0" expanded="false" />
-            <element signature="e#5595#5596#0" expanded="false" />
-            <element signature="e#7149#7150#0" expanded="false" />
-            <element signature="e#7176#7177#0" expanded="false" />
-            <element signature="e#9720#9721#0" expanded="false" />
-            <element signature="e#9753#9754#0" expanded="false" />
-            <element signature="e#11709#11710#0" expanded="false" />
-            <element signature="e#11755#11756#0" expanded="false" />
-            <element signature="e#12173#12174#0" expanded="false" />
-            <element signature="e#12222#12223#0" expanded="false" />
-            <element signature="e#12500#12501#0" expanded="false" />
-            <element signature="e#12550#12551#0" expanded="false" />
-            <element signature="e#13280#13281#0" expanded="false" />
-            <element signature="e#13334#13335#0" expanded="false" />
-            <element signature="e#15805#15806#0" expanded="false" />
-            <element signature="e#15833#15834#0" expanded="false" />
-            <element signature="e#15891#15892#0" expanded="false" />
-            <element signature="e#15966#15967#0" expanded="false" />
-            <element signature="e#20764#20765#0" expanded="false" />
-            <element signature="e#20808#20809#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../android-studio-ide-143.2637817-windows/sdk/sources/android-23/android/animation/AnimatorListenerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3102,20 +2991,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#7608#7609#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7941#7942#0" expanded="true" />
-            <element signature="e#8905#8906#0" expanded="true" />
-            <element signature="e#8936#8937#0" expanded="true" />
-            <element signature="e#9444#9445#0" expanded="true" />
-            <element signature="e#9485#9486#0" expanded="true" />
-            <element signature="e#9802#10054#0" expanded="true" />
-            <element signature="e#10053#10054#0" expanded="true" />
-            <element signature="e#10091#10278#0" expanded="true" />
-            <element signature="e#10277#10278#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3239,20 +3114,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#7608#7609#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7941#7942#0" expanded="true" />
-            <element signature="e#8905#8906#0" expanded="true" />
-            <element signature="e#8936#8937#0" expanded="true" />
-            <element signature="e#9444#9445#0" expanded="true" />
-            <element signature="e#9485#9486#0" expanded="true" />
-            <element signature="e#9802#10054#0" expanded="true" />
-            <element signature="e#10053#10054#0" expanded="true" />
-            <element signature="e#10091#10278#0" expanded="true" />
-            <element signature="e#10277#10278#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3711,19 +3572,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/ui/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/widget/src/main/res/values/attrs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.45373136">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding />
         </state>
@@ -3731,7 +3582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.11343284">
           <caret line="2" column="34" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="38" />
           <folding />
         </state>
@@ -3748,30 +3599,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#7608#7609#0" expanded="true" />
-            <element signature="e#7674#7675#0" expanded="true" />
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7941#7942#0" expanded="true" />
-            <element signature="e#8905#8906#0" expanded="true" />
-            <element signature="e#8936#8937#0" expanded="true" />
-            <element signature="e#9444#9445#0" expanded="true" />
-            <element signature="e#9485#9486#0" expanded="true" />
-            <element signature="e#9802#10054#0" expanded="true" />
-            <element signature="e#10053#10054#0" expanded="true" />
-            <element signature="e#10091#10278#0" expanded="true" />
-            <element signature="e#10277#10278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mds/switch/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3780,10 +3607,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/app/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget/src/main/java/com/app/widget/Switch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mds/note.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1570248">
-          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.3140496">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
