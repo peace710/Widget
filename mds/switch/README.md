@@ -7,15 +7,15 @@
 ###Usage
 ```xml
 <com.app.widget.Switch
-     android:layout_marginTop="10dip"
+     android:layout_marginTop="12dip"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:id="@+id/switch2"
      app:spotOffColor="#f7f5f1"
      app:spotOnColor="#ff4081"
      app:switchOffColor="#dadada"
      app:switchOnColor="#48ff4081"
-	 app:spotPadding="2dip"
+     app:spotPadding="2dip"
+     app:switchValue="true"
 />
 ```
 
