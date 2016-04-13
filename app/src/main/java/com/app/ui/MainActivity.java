@@ -10,9 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.app.R;
+import com.app.widget.Switch;
 import com.app.widget.carousel.CarouselImageView;
 import com.app.widget.carousel.CarouselIndicator;
-import com.app.widget.Switch;
 
 public class MainActivity extends AppCompatActivity implements CarouselImageView.OnCarouselChangeListener{
 
@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
         carouselImageView1.addImage(R.drawable.image_5);
         carouselImageView1.addImage(R.drawable.image_6);
 
+        carouselImageView2.setDefaultDrawable(R.drawable.image_6);
+
         carouselImageView2.addImage("http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg");
         carouselImageView2.addImage("http://ww1.sinaimg.cn/large/7a8aed7bjw1f2sm0ns82hj20f00l8tb9.jpg");
         carouselImageView2.addImage("http://ww3.sinaimg.cn/large/7a8aed7bjw1f2p0v9vwr5j20b70gswfi.jpg");
         carouselImageView2.addImage("http://ww1.sinaimg.cn/large/7a8aed7bjw1f2nxxvgz7xj20hs0qognd.jpg");
         carouselImageView2.addImage("http://ww2.sinaimg.cn/large/7a8aed7bjw1f2mteyftqqj20jg0siq6g.jpg");
         carouselImageView2.addImage("http://ww2.sinaimg.cn/large/7a8aed7bjw1f2lkx2lhgfj20f00f0dhm.jpg");
-
-        carouselImageView2.setDefaultDrawable(R.drawable.image_6);
 
         int selectColor = getResources().getColor(R.color.colorPrimary);
         int defaultColor = Color.parseColor("#dadada");
@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
             }
         }).bulid());
 
+        carouselImageView1.startAutoCycle(4000);
+        carouselImageView1.setPageTransformer(carouselImageView1.getDefaultTransformer());
+
         carouselImageView2.setIndicatorGravity(Gravity.CENTER);
         carouselImageView2.setOnCarouselChangeListener(this);
 //        carouselImageView2.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedColor(selectColor).setDefaultColor(defaultColor).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
@@ -88,12 +91,14 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
         Drawable selectDrawable = getResources().getDrawable(R.drawable.icon_3);
         Drawable defaultDrawable = getResources().getDrawable(R.drawable.icon_4);
 
+        carouselImageView2.startAutoCycle(5000);
         carouselImageView2.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedDrawable(selectDrawable).setDefaultDrawable(defaultDrawable).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
             @Override
             public View createView() {
                 return obtainIndicatorCircleView();
             }
         }).bulid());
+
     }
 
     private View obtainIndicatorView(){
@@ -118,10 +123,6 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
     @Override
     public void onCarouselItemClick(int position) {
         T("click:" + position);
-        if (position == 5){
-            carouselImageView1.setCurrentItem(0);
-            carouselImageView2.setCurrentItem(0);
-        }
     }
 
 

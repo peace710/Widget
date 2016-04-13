@@ -2,6 +2,8 @@ package com.app.widget.carousel;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
@@ -18,6 +20,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Created by Kira on 2016/4/13.
  */
@@ -31,8 +36,11 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
     private Drawable defaultDrawable;
     private CarouselImageAdapter adapter;
     private CarouselIndicator carouselIndicator;
-
     private int currentPosition = 0;
+    private Timer timer;
+    private TimerTask task;
+    private boolean isAutoCycle;
+    private int duration = 2000;
 
     public CarouselImageView(Context context) {
         this(context,null);
@@ -62,14 +70,22 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         LayoutParams indicatorParams = new LayoutParams(
                 LayoutParams.MATCH_PARENT,
                 LayoutParams.WRAP_CONTENT);
-        indicatorParams.gravity = Gravity.BOTTOM;
+        indicatorParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
         addView(indicatorLayout,indicatorParams);
 
         viewPager.addOnPageChangeListener(this);
-        viewPager.setOnTouchListener(this);
         adapter = new CarouselImageAdapter(imageList);
         viewPager.setAdapter(adapter);
+    }
 
+    public void setPageTransformer(ViewPager.PageTransformer pageTransformer){
+        if (null != pageTransformer){
+            viewPager.setPageTransformer(true,pageTransformer);
+        }
+    }
+
+    public ViewPager.PageTransformer getDefaultTransformer(){
+        return new DepthPageTransformer();
     }
 
     public void addImage(String url){
@@ -104,6 +120,7 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         image.setLayoutParams(imageParams);
         image.setScaleType(ImageView.ScaleType.CENTER_CROP);
         image.setOnClickListener(this);
+        image.setOnTouchListener(this);
         return image;
     }
 
@@ -142,15 +159,36 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         indicatorLayout.setGravity(gravity | Gravity.BOTTOM);
     }
 
+    public synchronized void setCurrentItem(int position){
+        setCurrentItem(position,false);
+    }
 
-    public void setCurrentItem(int position){
+    private void setCurrentItem(int position,boolean isAnim){
         if ( position < imageList.size()) {
-            viewPager.setCurrentItem(position,true);
+            viewPager.setCurrentItem(position,isAnim);
             if (null != carouselIndicator){
                 carouselIndicator.setSelected(position);
             }
             currentPosition = position;
         }
+    }
+
+    public void startAutoCycle(int duration) {
+        isAutoCycle = true;
+        if (duration > 1000) {
+            this.duration = duration;
+        }
+        startAutoCycle();
+    }
+
+    public void pauseAutoCycle(){
+        isAutoCycle = false;
+        stopAutoCycle();
+    }
+
+    public void resumeAutoCycle(){
+        isAutoCycle = true;
+        startAutoCycle();
     }
 
     @Override
@@ -177,10 +215,14 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-//        if (event.getAction() == MotionEvent.ACTION_UP){
-//
-//            return true;
-//        }
+        int action = event.getAction();
+        switch (action){
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_CANCEL:
+            case MotionEvent.ACTION_OUTSIDE:
+                startAutoCycle();
+                break;
+        }
         return false;
     }
 
@@ -202,10 +244,46 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-//        if (ev.getAction() == MotionEvent.ACTION_DOWN){
-//            return true;
-//        }
+        if (ev.getAction() == MotionEvent.ACTION_DOWN){
+            stopAutoCycle();
+        }
         return super.onInterceptTouchEvent(ev);
+    }
+
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            int size = imageList.size();
+            if (currentPosition == size - 1){
+                setCurrentItem(0);
+            }else{
+                setCurrentItem(currentPosition + 1,true);
+            }
+        }
+    };
+
+    private void startAutoCycle(){
+        if (isAutoCycle) {
+            timer = new Timer();
+            task = new AutoCycleTask();
+            timer.schedule(task, duration, duration);
+        }
+    }
+
+    private void stopAutoCycle(){
+        if (null != task && null != timer) {
+            task.cancel();
+            task = null;
+            timer.cancel();
+            timer = null;
+        }
+    }
+
+    class AutoCycleTask extends  TimerTask{
+        @Override
+        public void run() {
+            handler.sendEmptyMessage(0);
+        }
     }
 
     class CarouselImageAdapter extends PagerAdapter{
@@ -242,6 +320,32 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
             return view == object;
         }
 
+    }
+
+    class DepthPageTransformer  implements ViewPager.PageTransformer{
+        private static final float MIN_SCALE = 0.75f;
+
+        @Override
+        public void transformPage(View page, float position) {
+            int pageWidth = page.getWidth();
+
+            if (position < -1){
+                page.setAlpha(0);
+            }else if (position <= 0){
+                page.setAlpha(1);
+                page.setTranslationX(0);
+                page.setScaleX(1);
+                page.setScaleY(1);
+            }else if (position <= 1){
+                page.setAlpha(1 - position);
+                page.setTranslationX(pageWidth * -position);
+                float factor = MIN_SCALE + (1 - MIN_SCALE) * (1 - position);
+                page.setScaleX(factor);
+                page.setScaleY(factor);
+            }else{
+                page.setAlpha(0);
+            }
+        }
     }
 
 }

@@ -59,6 +59,10 @@ public class CarouselIndicator  {
         }
     }
 
+    View getIndicator(int position){
+        return list.get(position);
+    }
+
     View getView(){
         if (null != createIndicator){
             return createIndicator.createView();
@@ -107,4 +111,5 @@ public class CarouselIndicator  {
             return carouselIndicator;
         }
     }
+
 }
