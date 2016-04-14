@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
             }
         }).bulid());
 
-        carouselImageView1.startAutoCycle(4000);
+        carouselImageView1.startAutoCycle(2000);
         carouselImageView1.setPageTransformer(carouselImageView1.getDefaultTransformer());
 
         carouselImageView2.setIndicatorGravity(Gravity.CENTER);
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
         Drawable selectDrawable = getResources().getDrawable(R.drawable.icon_3);
         Drawable defaultDrawable = getResources().getDrawable(R.drawable.icon_4);
 
-        carouselImageView2.startAutoCycle(5000);
+        carouselImageView2.startAutoCycle(2000);
         carouselImageView2.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedDrawable(selectDrawable).setDefaultDrawable(defaultDrawable).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
             @Override
             public View createView() {
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
 
     private View obtainIndicatorView(){
         LinearLayout.LayoutParams indicatorParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, 10,1);
+                LinearLayout.LayoutParams.MATCH_PARENT, dp2px(5),1);
         View v = new View(this);
         v.setLayoutParams(indicatorParams);
         return  v;
@@ -111,14 +112,17 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
 
     private View obtainIndicatorCircleView(){
         LinearLayout.LayoutParams indicatorParams = new LinearLayout.LayoutParams(
-                25,25);
-        indicatorParams.bottomMargin = 20;
-        indicatorParams.leftMargin = 25;
+                dp2px(8),dp2px(8));
+        indicatorParams.bottomMargin = dp2px(8);
+        indicatorParams.leftMargin = dp2px(8);
         View v = new View(this);
         v.setLayoutParams(indicatorParams);
         return  v;
     }
 
+    private int dp2px(int size){
+        return  (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, size,getResources().getDisplayMetrics());
+    }
 
     @Override
     public void onCarouselItemClick(int position) {

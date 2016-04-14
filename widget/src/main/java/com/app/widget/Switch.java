@@ -72,7 +72,7 @@ public class Switch extends View implements View.OnClickListener{
         rectF = new RectF();
 
         TypedArray array = getContext().obtainStyledAttributes(attrs,R.styleable.Switch);
-        spotPadding = (int)array.getDimension(R.styleable.Switch_spotPadding,px2dp(DEFAULT_SPOT_PADDING));
+        spotPadding = (int)array.getDimension(R.styleable.Switch_spotPadding,dp2px(DEFAULT_SPOT_PADDING));
         switchOnColor = array.getColor(R.styleable.Switch_switchOnColor,Color.parseColor(DEFAULT_SWITCH_ON_COLOR));
         switchOffColor = array.getColor(R.styleable.Switch_switchOffColor,Color.parseColor(DEFAULT_SWITCH_OFF_COLOR));
         spotOnColor = array.getColor(R.styleable.Switch_spotOnColor,Color.parseColor(DEFAULT_SPOT_ON_COLOR));
@@ -86,8 +86,8 @@ public class Switch extends View implements View.OnClickListener{
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = measureSize(px2dp(DEFAULT_WIDTH),widthMeasureSpec);
-        int height = measureSize(px2dp(DEFAULT_HEIGHT),heightMeasureSpec);
+        int width = measureSize(dp2px(DEFAULT_WIDTH),widthMeasureSpec);
+        int height = measureSize(dp2px(DEFAULT_HEIGHT),heightMeasureSpec);
         setMeasuredDimension(width,height);
     }
 
@@ -102,7 +102,7 @@ public class Switch extends View implements View.OnClickListener{
         return  defaultSize;
     }
 
-    private int px2dp(int size){
+    private int dp2px(int size){
         return  (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, size,res.getDisplayMetrics());
     }
 
@@ -223,7 +223,7 @@ public class Switch extends View implements View.OnClickListener{
     }
 
     public void setSpotPadding(int spotPadding) {
-        this.spotPadding = px2dp(spotPadding);
+        this.spotPadding = dp2px(spotPadding);
         invalidate();
     }
 

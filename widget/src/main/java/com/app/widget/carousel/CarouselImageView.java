@@ -76,6 +76,7 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         viewPager.addOnPageChangeListener(this);
         adapter = new CarouselImageAdapter(imageList);
         viewPager.setAdapter(adapter);
+        viewPager.setOnTouchListener(this);
     }
 
     public void setPageTransformer(ViewPager.PageTransformer pageTransformer){
@@ -120,7 +121,6 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         image.setLayoutParams(imageParams);
         image.setScaleType(ImageView.ScaleType.CENTER_CROP);
         image.setOnClickListener(this);
-        image.setOnTouchListener(this);
         return image;
     }
 
@@ -218,8 +218,6 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         int action = event.getAction();
         switch (action){
             case MotionEvent.ACTION_UP:
-            case MotionEvent.ACTION_CANCEL:
-            case MotionEvent.ACTION_OUTSIDE:
                 startAutoCycle();
                 break;
         }
@@ -231,6 +229,7 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
         if (null != listener){
             listener.onCarouselItemClick(currentPosition);
         }
+        startAutoCycle();
     }
 
     public void setOnCarouselChangeListener(OnCarouselChangeListener listener) {
@@ -246,6 +245,8 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         if (ev.getAction() == MotionEvent.ACTION_DOWN){
             stopAutoCycle();
+        }else if(ev.getAction() == MotionEvent.ACTION_UP) {
+            startAutoCycle();
         }
         return super.onInterceptTouchEvent(ev);
     }
@@ -264,9 +265,11 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
 
     private void startAutoCycle(){
         if (isAutoCycle) {
-            timer = new Timer();
-            task = new AutoCycleTask();
-            timer.schedule(task, duration, duration);
+            if (null == task && null == timer) {
+                timer = new Timer();
+                task = new AutoCycleTask();
+                timer.schedule(task, duration, duration);
+            }
         }
     }
 
@@ -347,6 +350,4 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
             }
         }
     }
-
 }
-
