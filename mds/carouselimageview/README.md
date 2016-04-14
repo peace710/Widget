@@ -11,7 +11,6 @@
         android:layout_height="200dip"
         android:id="@+id/carouselImageView"
      />
-/>
 ```
 
 2) In Java
