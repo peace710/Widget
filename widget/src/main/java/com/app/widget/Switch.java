@@ -51,12 +51,11 @@ public class Switch extends View implements View.OnClickListener{
     private OnSwitchListener listener;
 
     public Switch(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public Switch(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs);
+        this(context, attrs,0);
     }
 
     public Switch(Context context, AttributeSet attrs, int defStyleAttr) {

@@ -70,35 +70,35 @@ public class MainActivity extends AppCompatActivity implements CarouselImageView
 
         carouselImageView1.setIndicatorGravity(Gravity.CENTER);
         carouselImageView1.setOnCarouselChangeListener(this);
-        carouselImageView1.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedColor(selectColor).setDefaultColor(defaultColor).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
+        carouselImageView1.addCarouselIndicator(new CarouselIndicator.Builder().setSelectedColor(selectColor).setDefaultColor(defaultColor).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
             @Override
             public View createView() {
                 return obtainIndicatorView();
             }
-        }).bulid());
+        }).build());
 
         carouselImageView1.startAutoCycle(2000);
         carouselImageView1.setPageTransformer(carouselImageView1.getDefaultTransformer());
 
         carouselImageView2.setIndicatorGravity(Gravity.CENTER);
         carouselImageView2.setOnCarouselChangeListener(this);
-//        carouselImageView2.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedColor(selectColor).setDefaultColor(defaultColor).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
+//        carouselImageView2.addCarouselIndicator(new CarouselIndicator.Builder().setSelectedColor(selectColor).setDefaultColor(defaultColor).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
 //            @Override
 //            public View createView() {
 //                return obtainIndicatorCircleView();
 //            }
-//        }).bulid());
+//        }).build());
 
         Drawable selectDrawable = getResources().getDrawable(R.drawable.icon_3);
         Drawable defaultDrawable = getResources().getDrawable(R.drawable.icon_4);
 
         carouselImageView2.startAutoCycle(2000);
-        carouselImageView2.addCarouselIndicator(new CarouselIndicator.Bulider().setSelectedDrawable(selectDrawable).setDefaultDrawable(defaultDrawable).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
+        carouselImageView2.addCarouselIndicator(new CarouselIndicator.Builder().setSelectedDrawable(selectDrawable).setDefaultDrawable(defaultDrawable).setCreateIndicator(new CarouselIndicator.CreateIndicator() {
             @Override
             public View createView() {
                 return obtainIndicatorCircleView();
             }
-        }).bulid());
+        }).build());
 
     }
 

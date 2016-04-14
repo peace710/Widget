@@ -4,7 +4,8 @@
 ![Switch](https://github.com/peace710/Widget/blob/master/mds/switch/1.gif)
 
 
-###Usage
+### Usage
+1)In xml
 ```xml
 <com.app.widget.Switch
      android:layout_marginTop="12dip"
@@ -17,6 +18,17 @@
      app:spotPadding="2dip"
      app:switchValue="true"
 />
+```
+
+2)In Java
+```Java
+   mSwitch.setOnSwitchListener(listener);
+   mSwitch.setSpotOffColor(spotColor);
+   mSwitch.setSpotOnColor(spotColor);
+   mSwitch.setSpotPadding(spotPadding);
+   mSwitch.setSwitchOnColor(switchOnColor);
+   mSwitch.setSwitchOnColor(switchOffColor);
+   mSwitch.setSwitch(true);
 ```
 
 License

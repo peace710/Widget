@@ -74,40 +74,40 @@ public class CarouselIndicator  {
         View createView();
     }
 
-    public static class Bulider{
+    public static class Builder{
         private CarouselIndicator carouselIndicator;
 
-        public Bulider(){
+        public Builder(){
             carouselIndicator = new CarouselIndicator();
         }
 
-        public Bulider setDefaultDrawable(Drawable drawable){
+        public Builder setDefaultDrawable(Drawable drawable){
             carouselIndicator.setDefaultDrawable(drawable);
             return this;
         }
 
-        public Bulider setSelectedDrawable(Drawable drawable){
+        public Builder setSelectedDrawable(Drawable drawable){
             carouselIndicator.setSelectedDrawable(drawable);
             return this;
         }
 
-        public Bulider setDefaultColor(int color){
+        public Builder setDefaultColor(int color){
             carouselIndicator.setDefaultDrawable(new ColorDrawable(color));
             return this;
         }
 
-        public Bulider setSelectedColor(int color){
+        public Builder setSelectedColor(int color){
             carouselIndicator.setSelectedDrawable(new ColorDrawable(color));
             return this;
         }
 
-        public Bulider setCreateIndicator(CreateIndicator createIndicator){
+        public Builder setCreateIndicator(CreateIndicator createIndicator){
             carouselIndicator.setCreateIndicator(createIndicator);
             return  this;
         }
 
 
-        public CarouselIndicator bulid(){
+        public CarouselIndicator build(){
             return carouselIndicator;
         }
     }
