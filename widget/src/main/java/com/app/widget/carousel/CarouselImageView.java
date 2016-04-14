@@ -243,10 +243,15 @@ public class CarouselImageView  extends FrameLayout implements ViewPager.OnPageC
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN){
-            stopAutoCycle();
-        }else if(ev.getAction() == MotionEvent.ACTION_UP) {
-            startAutoCycle();
+        int action = ev.getAction();
+        switch (action){
+            case MotionEvent.ACTION_DOWN:
+                stopAutoCycle();
+                break;
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_CANCEL:
+                startAutoCycle();
+                break;
         }
         return super.onInterceptTouchEvent(ev);
     }
