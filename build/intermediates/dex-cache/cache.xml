@@ -2,11 +2,60 @@
 <items version="2" >
 
     <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-76c1a145786313a623a82003f4e8542927772585.jar" />
+    </item>
+    <item
+        jar="E:\simple_environment\androidstudio\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.1-65a10c099ec2b536b55538526a39b7ccbd273457.jar" />
+    </item>
+    <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-f1fa3fda7741e8e45dee72c6340ac4a638c360a5.jar" />
+    </item>
+    <item
         jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\Widget\widget\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="5c1c5fbba84cf6d12d8983b00a3f97916fd1d019">
+        sha1="9461028dedd36459dd8155171a2e61b58d03a70e">
         <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-770b5caf05618bd98bac35cb8703a019917e16be.jar" />
+    </item>
+    <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-0374d9390b91699ebb66f56fbb7eeced58406951.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kira\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\glide-3.7.0-4e039fc0033fcf13983ba432336e55a6283077cf.jar" />
+    </item>
+    <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.1-10b48e50e9ea0ee45a3facf892460cb85ef21df5.jar" />
+    </item>
+    <item
+        jar="E:\simple_environment\workspace\Widget\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="E:\simple_environment\workspace\Widget\app\build\intermediates\pre-dexed\debug\classes-e4311d93008b56e63661e18d5c49f5b73ae82def.jar" />
     </item>
 
 </items>
