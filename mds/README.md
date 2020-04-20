@@ -1,7 +1,7 @@
-#Android自定义View
+# Android自定义View
 Android自定义View时,一般会涉及到onMeasure、onLayout、onSizeChanged、onDraw以及和事件分发传递相关的方法等
 
-###Android自定义View之onMeasure
+### Android自定义View之onMeasure
 一般Android在绘制View时会调用onMeasure方法来计算其宽高，当控件的layout_width和layout_height设为match_parent或者wrap_content显示的大小由其父容器控件来决定。若设置为固定大小的值，那么就显示其设定的值
 
 MeasureSpec.getSize()会解析MeasureSpec得到测量值的大小  
