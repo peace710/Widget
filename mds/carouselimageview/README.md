@@ -1,6 +1,6 @@
-#Switch
+# Switch
 
-###Look
+### Look
 ![CarouselImageView](https://github.com/peace710/Widget/blob/master/mds/carouselimageview/1.gif)
 
 ### Usage
