@@ -1,6 +1,6 @@
-#Switch
+# Switch
 
-###Look
+### Look
 ![Switch](https://github.com/peace710/Widget/blob/master/mds/switch/1.gif)
 
 
